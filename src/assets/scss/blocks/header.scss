@@ -1,0 +1,107 @@
+.header {
+    padding: 20px 0; }
+    .header__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .header__inner-burger {
+        width: 32px; 
+        display: none;
+        @include breakpoint($w-768) {
+          display: block;
+        }
+      }
+        .header__inner-burger::before {
+          display: block;
+          content: '';
+          width: 32px;
+          height: 1px;
+          margin-bottom: 10px;
+          background: #262633; }
+        .header__inner-burger::after {
+          display: block;
+          content: '';
+          width: 17px;
+          height: 1px;
+          background: #262633; }
+      .header__inner-ul {
+        margin: 0;
+        padding: 0; }
+      .header__inner-link {
+        margin-right: 46px;
+        font-size: 15px;
+        line-height: 18px; 
+        &:last-child {
+          @include breakpoint($w-991) {
+            display: none;
+          }
+        }
+        @include breakpoint($w-1200) {
+          margin-right: 30px;
+          font-size: 14px;
+        }
+        @include breakpoint($w-991) {
+          font-size: 14px;
+          line-height: 140%;
+          margin-right: 20px;
+        }
+        @include breakpoint($w-768) {
+          margin-right: 10px;
+        }
+        @include breakpoint($w-576) {
+          display: none;
+        }
+        
+      }
+      .header__inner-icon a {
+        margin-right: 24px; }
+      .header__inner-info {
+        display: flex;
+        flex-direction: column; 
+        @include breakpoint($w-576) {
+          display: none;
+        }
+      }
+        .header__inner-info a[href^="tel:"] {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 20px; 
+          @include breakpoint($w-1200) {
+            font-size: 14px;
+            line-height: 16px; 
+          }
+          @include breakpoint($w-991) {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px; 
+          }
+          
+        }
+        .header__inner-info a[href^="mailto:"] {
+          font-size: 13px;
+          line-height: 120%;
+          color: #797986; 
+          @include breakpoint($w-1200) {
+            font-size: 12px;
+            line-height: 110%;
+          }
+          @include breakpoint($w-991) {
+            font-size: 13px;
+            line-height: 120%;
+          }
+        }
+.header__inner-icon {
+  @include breakpoint($w-768) {
+    display: flex;
+    flex-direction: column;
+  }
+  @include breakpoint($w-576) {
+    flex-direction: row;
+  }
+}
+.header__inner-btn {
+  @include breakpoint($w-768) {
+    display: none;
+  }
+
+}

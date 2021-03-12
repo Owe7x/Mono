@@ -1,0 +1,43 @@
+.btn {
+    width: 190px;
+    height: 52px;
+    border-radius: 14px;
+    border: none;
+    outline: none !important;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px; 
+    color: #fff;
+    @include breakpoint($w-1200) {
+      width: 150px;
+      height: 52px;
+      font-size: 13px;
+      line-height: 13px;
+    }
+    @include breakpoint($w-991) {
+      width: 150px;
+      height: 52px;
+      font-size: 14px;
+      line-height: 14px; 
+    }
+    
+    &:active {
+      outline: none !important; 
+    }
+    &:focus {
+      outline: none !important; 
+    }
+    &--red {
+      background: #BF2738;
+      &:hover {
+        background: #d42035; 
+      }
+    }
+    &--footer {
+      background: #2A2A2E;
+      border: 2px solid #494950!important;
+      &:hover {
+        background: #8b8b96;
+      }
+    }
+  }

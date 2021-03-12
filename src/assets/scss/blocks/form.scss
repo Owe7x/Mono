@@ -1,0 +1,181 @@
+.form {
+    padding: 64px 0; 
+    @include breakpoint($w-576) {
+      padding: 30px 18px 50px;
+    }
+  }
+    .form__inner-info {
+      max-width: 607px; 
+      @include breakpoint($w-576) {
+        margin-bottom: 55px;
+      }
+    }
+    .form__inner-contact {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px; 
+    }
+      .form__inner-contact a[href^="tel:"] {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 110%; 
+        @include breakpoint($w-1200) {
+          font-size: 30px;
+          line-height: 100%; 
+        }
+        @include breakpoint($w-576) {
+          font-size: 28px;
+          line-height: 120%;
+        }
+      }
+      .form__inner-contact a[href^="mailto:"] {
+        font-size: 25px;
+        line-height: 30px;
+        color: #BF2738; 
+        @include breakpoint($w-1200) {
+          font-size: 23px;
+          line-height: 27px;
+        }
+        @include breakpoint($w-576) {
+          font-size: 25px;
+          line-height: 30px;
+        }
+      }
+    .form__inner-p {
+      font-size: 17px;
+      line-height: 110%;
+      margin-bottom: 15px; 
+      @include breakpoint($w-1200) {
+        font-size: 16px;
+        line-height: 100%;
+      }
+      @include breakpoint($w-576) {
+        font-size: 14px;
+        line-height: 140%;
+      }
+    }
+    .form__inner-text {
+      max-width: 445px;
+      font-size: 13px;
+      line-height: 150%;
+      color: #808080; 
+      @include breakpoint($w-1200) {
+        font-size: 12px;
+        line-height: 130%;
+      }
+      @include breakpoint($w-576) {
+        font-size: 13px;
+        line-height: 150%;
+      }
+    }
+    .form-title {
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 36px;
+      line-height: 110%;
+      color: #262633;
+      margin-bottom: 20px; 
+      @include breakpoint($w-1200) {
+        font-size: 30px;
+        line-height: 100%; 
+      }
+      @include breakpoint($w-576) {
+        font-size: 20px;
+        line-height: 120%;
+      }
+    }
+  
+  .br {
+    margin-bottom: 15px; 
+  }
+  
+  .form-form {
+    max-width: 630px; 
+  }
+  
+  .input-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px; 
+    @include breakpoint($w-991) {
+      justify-content: unset;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+  }
+    .input-text input {
+      width: 300px;
+      height: 52px;
+      background: #F5F5F5;
+      border-radius: 14px;
+      border: none;
+      padding-left: 20px; 
+      @include breakpoint($w-1400) {
+        width: 250px;
+      }
+      @include breakpoint($w-1200) {
+        width: 220px;
+      }
+      @include breakpoint($w-991) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  
+  .textarea {
+    width: 630px;
+    height: 133px;
+    background: #F5F5F5;
+    border-radius: 14px;
+    border: none;
+    padding: 20px 0 0 17px; 
+    @include breakpoint($w-1400) {
+      width: 100%;
+    }
+  }
+  
+  .check {
+    margin: 21px 0 33px 0; 
+  }
+    .check input[type='checkbox'] {
+      display: none; 
+    }
+    .check label {
+      display: inline-block;
+      position: relative;
+      padding-left: 31px;
+      cursor: pointer; 
+      color: #808080;
+      @include breakpoint($w-1200) {
+        font-size: 13px;
+        line-height: 13px;
+      }
+      @include breakpoint($w-576) {
+        font-size: 13px;
+        line-height: 120%;
+      }
+    }
+      .check label::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        background-color: #F5F5F5;
+        border-radius: 4px; 
+        @include breakpoint($w-1400) {
+          top: 0;
+        }
+      }
+  
+  input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    color: #000000;
+    text-align: center;
+    line-height: 19px; 
+  }

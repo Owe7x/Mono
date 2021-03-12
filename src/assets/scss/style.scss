@@ -1,0 +1,39 @@
+@import "vars";
+@import "vendor/reset";
+@import 'bootstrap/scss/bootstrap';
+@import 'mixins.scss';
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    background-color: #fff;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: $primary;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+/* Blocks */
+@import "blocks/header.scss";
+@import "blocks/btn.scss";
+@import "blocks/contact.scss";
+@import "blocks/form.scss";
+@import "blocks/map.scss";
+@import "blocks/city.scss";
+@import "blocks/footer.scss";
+@import "blocks/modal.scss";

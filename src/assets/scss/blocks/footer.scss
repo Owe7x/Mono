@@ -1,0 +1,146 @@
+.footer {
+    background: #222225;
+    position: relative;
+    color: $white;
+    &::after {
+        content: '';
+        display: block;
+        background: #2A2A2E;
+        width: 50%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        @include breakpoint($w-576) {
+            width: 100%;
+            height: 50%;
+            top: 50%;
+        }
+    }
+    &::before {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: rgba($color: #fff, $alpha: 0.05);
+        position: absolute;
+        bottom: 13%;
+        z-index: 2;
+        @include breakpoint($w-576) {
+            bottom: 7%;
+        }
+    }
+    &__inner {
+        position: relative;
+        z-index: 2;
+
+        &-address {
+            font-size: 16px;
+            line-height: 130%;
+        }
+        &-block {
+            padding: 63px 0 43px 0;
+            @include breakpoint($w-576) {
+                padding: 41px 21px 43px 15px;
+            }
+        }
+        &-block2 {
+            padding: 63px 0 55px 126px;
+            display: flex;
+            flex-direction: column;
+            @include breakpoint($w-1400) {
+                padding: 63px 0 55px 60px;
+            }
+            @include breakpoint($w-576) {
+                padding: 39px 15px 43px 15px;
+            }
+        }
+        &-nav {
+            margin-bottom: 69px;
+        }
+        &-menu {
+            max-width: 510px;
+            a {
+                color: #797986;
+                font-size: 16px;
+                line-height: 180%;
+                margin-right: 15px;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+        &-contact {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 117px;
+            @include breakpoint($w-991) {
+                justify-content: unset;
+                flex-direction: column;
+                margin-bottom: 50px;
+            }
+        }
+        &-phone {
+            a[href^="tel:"] {
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 130%;
+                color: $white;
+                display: block;
+                margin-bottom: 10px;
+                @include breakpoint($w-1200) {
+                    font-size: 26px;
+                    line-height: 120%;
+                }
+            }
+            a[href^="mailto:"] {
+                font-size: 24px;
+                line-height: 140%;
+                color: #F23147;
+                @include breakpoint($w-1200) {
+                    font-size: 22px;
+                    line-height: 130%;
+                }
+            }
+            @include breakpoint($w-991) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__li {
+        margin-bottom: 15px;
+        a {
+            font-size: 24px;
+            line-height: 140%;
+            color: #FFFFFF;
+            @include breakpoint($w-1200) {
+                flex-direction: 22px;
+                line-height: 120%;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-ul {
+        margin: 0;
+        padding: 0;
+    }
+    &__copy {
+        padding: 23px 0;
+        font-size: 13px;
+        line-height: 110%;
+        color: #797986;
+        @include breakpoint($w-576) {
+            font-size: 13px;
+            line-height: 110%;
+            color: #797986;
+            position: relative;
+            z-index: 3;
+            padding: 19px 0 19px 15px;
+        }
+    }
+
+}

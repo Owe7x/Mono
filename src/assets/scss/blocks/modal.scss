@@ -1,0 +1,93 @@
+.modal-header {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: #000000cb;
+    @include breakpoint($w-576) {
+        width: 50%;
+        height: 100vh;
+        padding: 0;
+    }
+}
+.block-modal {
+    position: absolute;
+    top: 10%;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint($w-576) {
+        flex-direction: column;
+        width: 100%;
+        top: 5%;
+    }
+}
+.modal-burger {
+    display: none;
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    top: 5%;
+    right: 6px;
+    &::before {
+        width: 36px;
+        height: 2px;
+        margin-bottom: 8px;
+        background: $white;
+        display: block;
+        content: '';
+    }
+    &::after {
+        width: 24px;
+        height: 2px;
+        background: $white;
+        display: block;
+        content: '';
+    }
+    @include breakpoint($w-400) {
+        display: block;
+    }
+}
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}
+.header__inner-ul {
+    display: flex;
+    @include breakpoint($w-576) {
+        flex-direction: column;
+    }
+}
+.header__inner-link--modal {
+    color: $white;
+    margin-right: 20px;
+    @include breakpoint($w-576) {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+}
+.header__inner-info--modal {
+    display: none;
+    @include breakpoint($w-576) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    a {
+        color: $white;
+    }
+    a[href^="tel:"] {
+        font-size: 26px;
+    }
+    a[href^="mailto:"] {
+        color: #BF2738;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,40 @@
+.contact {
+    background: #F5F5F5; 
+  }
+    .contact__links {
+      padding: 21px 0;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+      @include breakpoint($w-576) {
+        padding: 16px;
+      }
+    }
+      .contact__links-link {
+        margin-right: 14px; 
+      }
+        .contact__links-link:first-child {
+          list-style: none; 
+        }
+    .contact__name {
+      text-align: center;
+      text-transform: uppercase;
+      padding: 24px;
+      font-size: 46px;
+      line-height: 100%; 
+      @include breakpoint($w-1200) {
+        font-size: 40px;
+        line-height: 100%; 
+      }
+      @include breakpoint($w-576) {
+        padding: 20px;
+        font-size: 22px;
+        line-height: 120%;
+      }
+    }
+.contact__links-link a {
+  @include breakpoint($w-576) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
